@@ -23,7 +23,7 @@ class UsersController < ApplicationController
   end
 
   def show
-
+    set_user
   end
 
   def destroy
@@ -34,6 +34,10 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(:email, :name)
+  end
+
+  def set_user
+    @user = User.find(params[:id])
   end
 
 end

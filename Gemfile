@@ -35,6 +35,8 @@ gem 'simple_form'
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass' # Bootstrap v3
 gem 'font-awesome-sass'
+gem 'carrierwave', '~> 1.2.2'
+gem "mini_magick"
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

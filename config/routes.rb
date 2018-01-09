@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   resources :pages, only: [:index]
 
-  resources :users
+  resources :users do
+    resources :posts, only: [:new, :create, :update, :index, :show]
+  end
 
   root "pages#index"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

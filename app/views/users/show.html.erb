@@ -2,4 +2,13 @@
 
 <div class="about-me">
   <h3>About Me</h3>
+  <h4>Number of posts: <%= @user.posts.count %></h4>
 </div>
+
+<% @user.posts.each do |post| %>
+  <div class="post">
+    <%= image_tag post.image.thumb %>
+  </div>
+<% end %>
+
+<%= link_to "Add a post", new_user_post_path(@user) %>
